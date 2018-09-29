@@ -132,7 +132,7 @@ public extension RippleView {
         
         let scaleAnimation: () -> (CAAnimation) = {
             let animation = CABasicAnimation(keyPath: "transform.scale")
-            animation.timingFunction = CAMediaTimingFunction(name: kCAMediaTimingFunctionEaseOut)
+            animation.timingFunction = CAMediaTimingFunction(name: CAMediaTimingFunctionName.easeOut)
             animation.fromValue = NSNumber(value: 1 as Float)
             animation.toValue = NSNumber(value: self.ringScale as Float)
             animation.duration = self.duration
@@ -141,7 +141,7 @@ public extension RippleView {
         
         let opacityAnimation: () -> (CAAnimation) = {
             let animation = CABasicAnimation(keyPath: "opacity")
-            animation.timingFunction = CAMediaTimingFunction(name: kCAMediaTimingFunctionEaseOut)
+            animation.timingFunction = CAMediaTimingFunction(name: CAMediaTimingFunctionName.easeOut)
             animation.fromValue = NSNumber(value: 1 as Float)
             animation.toValue = NSNumber(value: 0 as Float)
             animation.duration = self.duration
